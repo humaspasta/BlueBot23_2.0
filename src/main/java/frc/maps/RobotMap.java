@@ -43,5 +43,7 @@ public interface RobotMap {
      public static final boolean INTAKE_BOTTOM_REVERSE = true;
 
      public static final double INTAKE_POSITION_CONVERSION_FACTOR = 0.51095075;
+    public static final int ELEVATOR = 0;
+    public static final boolean ELEVATOR_REVERSE = false;
 
 }
