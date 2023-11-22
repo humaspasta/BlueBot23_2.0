@@ -19,31 +19,31 @@ package frc.maps;
 */
 public interface RobotMap {
      //DriveTrain Constants
-     public static final int FRONT_RIGHT = 3;
+     public static final int FRONT_RIGHT = 1;
      public static final boolean FRONT_RIGHT_REVERSE = true;
-     public static final int FRONT_LEFT = 1;
+     public static final int FRONT_LEFT = 4;
      public static final boolean FRONT_LEFT_REVERSE = false;
-     public static final int BACK_RIGHT = 4;
+     public static final int BACK_RIGHT = 2;
      public static final boolean BACK_RIGHT_REVERSE = true;
-     public static final int BACK_LEFT = 2;
+     public static final int BACK_LEFT = 3;
      public static final boolean BACK_LEFT_REVERSE = false;
 
      public static final double DRIVE_ENCODER = 0.1673;
 
      // Intake Arm Retractor Constants
-     public static final int ARM = 5;
+     public static final int ARM = 0;
      public static final boolean ARM_REVERSE = false;
 
      //Intake Spinner Constants (Motors)
-     public static final int INTAKE_TOP = 7;
+     public static final int INTAKE_TOP = 6;
      public static final boolean INTAKE_TOP_REVERSE = true; //change
 
      
-     public static final int INTAKE_BOTTOM = 6;
+     public static final int INTAKE_BOTTOM = 7;
      public static final boolean INTAKE_BOTTOM_REVERSE = true;
 
      public static final double INTAKE_POSITION_CONVERSION_FACTOR = 0.51095075;
-    public static final int ELEVATOR = 0;
+    public static final int ELEVATOR = 5;
     public static final boolean ELEVATOR_REVERSE = false;
 
 }
