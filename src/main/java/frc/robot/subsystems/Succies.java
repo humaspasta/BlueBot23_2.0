@@ -15,6 +15,6 @@ public class Succies extends SubsystemBase{
 
 
     public void INeedSucc(double Speeed){
-        intake.set(Speeed);
+        intake.set(Speeed * .25);
     }
 }//jasicnhdslcbjcbdewkjcb wkjcb ewkjcb,

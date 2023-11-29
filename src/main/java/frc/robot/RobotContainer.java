@@ -40,23 +40,31 @@ public class RobotContainer {
     RunCommand VroomDefaultVroom = new RunCommand(()->{
       vroom.drive(OI.axis(0,ControlMap.L_JOYSTICK_VERTICAL), OI.axis(0,ControlMap.R_JOYSTICK_HORIZONTAL));
 
-    });
+    }, vroom);
 
     vroom.setDefaultCommand(VroomDefaultVroom);
 
     RunCommand UppsiesDefaultUppsies = new RunCommand(()->{
-      uppsies.INeedUppsies(OI.axis(1,ControlMap.L_JOYSTICK_VERTICAL)*0.5);
-    });
+      uppsies.INeedUppsies(OI.axis(1,ControlMap.L_JOYSTICK_VERTICAL));
+      double pos = uppsies.uppsiesEncoder();
+      if (pos > topPos || pos < bottomPos){
+        uppsies.INeedUppsies(0);
+      }
+    }, uppsies);
+
     uppsies.setDefaultCommand(UppsiesDefaultUppsies);
+
     RunCommand SucciesDefaultSuccies = new RunCommand(() ->{
+
       double speed = 0;
       if(OI.axis(1, ControlMap.RT) > 0)
         speed = OI.axis(1, ControlMap.RT);
       else
         speed = -1 * OI.axis(1, ControlMap.LT);
       succies.INeedSucc(speed);
-    });
-    uppsies.setDefaultCommand(SucciesDefaultSuccies);
+    } , succies);
+    
+    succies.setDefaultCommand(SucciesDefaultSuccies);
     // Configure the button bindings
     configureButtonBindings();
   }

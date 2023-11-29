@@ -37,7 +37,7 @@ public class CCSparkMax extends CANSparkMax{
         this.setPositionConversionFactor(encoder);
     }
     public CCSparkMax(String name, String shortName, int deviceID, MotorType controlMode, IdleMode idleMode,
-     boolean reverse){
+     boolean reverse, boolean noEncoder){
         super(deviceID, controlMode);
         this.name = name;
         this.shortName = shortName;
@@ -45,9 +45,11 @@ public class CCSparkMax extends CANSparkMax{
         super.setInverted(reverse);
         
 
+        if(noEncoder){
         pidController = super.getPIDController();
-        this.encoder = super.getEncoder();
         this.setPositionConversionFactor(1);
+        }
+        
     }
 
     public void reset(){

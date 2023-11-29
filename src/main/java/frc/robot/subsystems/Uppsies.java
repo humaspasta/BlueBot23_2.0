@@ -16,9 +16,15 @@ public class Uppsies extends SubsystemBase{
 
     //Next we set the speed to somthing (so it moves)
     public void INeedUppsies(double speed){
-        elevator.set(speed);
+        elevator.set(speed * .25);
+        System.out.println(elevator.getPosition());
 
-    } // Here, we are creating a command that moves the motor from point a to b
+    } 
+    public double uppsiesEncoder(){
+        return elevator.getPosition();
+    }
+    
+    // Here, we are creating a command that moves the motor from point a to b
     public RunCommand elevatorUppies(double target) {
         PIDController controllerUppsies = new PIDController(.5,0,0);
         return new RunCommand(() -> {
