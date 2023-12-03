@@ -47,9 +47,6 @@ public class RobotContainer {
     RunCommand UppsiesDefaultUppsies = new RunCommand(()->{
       uppsies.INeedUppsies(OI.axis(1,ControlMap.L_JOYSTICK_VERTICAL));
       double pos = uppsies.uppsiesEncoder();
-      if (pos > topPos || pos < bottomPos){
-        uppsies.INeedUppsies(0);
-      }
     }, uppsies);
 
     uppsies.setDefaultCommand(UppsiesDefaultUppsies);

@@ -22,11 +22,11 @@ public interface RobotMap {
      public static final int FRONT_RIGHT = 1;
      public static final boolean FRONT_RIGHT_REVERSE = true;
      public static final int FRONT_LEFT = 4;
-     public static final boolean FRONT_LEFT_REVERSE = false;
+     public static final boolean FRONT_LEFT_REVERSE = false; // not reversed initially prob should also be true
      public static final int BACK_RIGHT = 2;
      public static final boolean BACK_RIGHT_REVERSE = true;
      public static final int BACK_LEFT = 3;
-     public static final boolean BACK_LEFT_REVERSE = false;
+     public static final boolean BACK_LEFT_REVERSE = true;
 
      public static final double DRIVE_ENCODER = 0.1673;
 
@@ -44,6 +44,7 @@ public interface RobotMap {
 
      public static final double INTAKE_POSITION_CONVERSION_FACTOR = 0.51095075;
     public static final int ELEVATOR = 5;
-    public static final boolean ELEVATOR_REVERSE = false;
+    public static final boolean ELEVATOR_REVERSE = true;
 
 }
+//
