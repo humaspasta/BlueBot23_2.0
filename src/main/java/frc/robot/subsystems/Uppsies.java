@@ -50,9 +50,5 @@ public class Uppsies extends SubsystemBase{
     public void set(double d) {
     }
 
-    public double getEncoders(){
-        return elevator.get();
-    }
-
     
 }

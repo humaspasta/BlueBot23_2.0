@@ -1,12 +1,10 @@
 package frc.robot.subsystems;
-import java.time.Duration;
 
 import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
-import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.helpers.CCSparkMax;
 import frc.maps.RobotMap;
@@ -25,5 +23,4 @@ public class Vroom extends SubsystemBase {
     public void drive(double moveSpeed, double turnSpeed){
         difDrive.arcadeDrive(moveSpeed, turnSpeed);
     }
-    
 }
